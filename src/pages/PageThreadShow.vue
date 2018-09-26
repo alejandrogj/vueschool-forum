@@ -2,7 +2,7 @@
     <div class="col-large push-top">
       <h1>{{thread.title}}</h1>
       <div class="post-list">
-        <div v-for="postId in thread.posts" class="post">
+        <div v-for="postId in thread.posts" class="post" :key="postId">
           <div class="user-info">
             <a href="#" class="user-name">{{users[posts[postId].userId].name}}</a>
             <a href="#" class="avatar-large">
