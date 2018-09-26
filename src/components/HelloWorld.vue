@@ -1,7 +1,13 @@
 <template>
   <div>
     <h1>Welcome</h1>
-    <h2>What's up</h2>
+    <div v-for="thread in threads">
+      <h2>{{thread.title}}</h2>
+      <div v-for="postId in thread.posts">
+        <p>{{ users[posts[postId].userId].name }}</p>
+        <p>{{ posts[postId].text }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
